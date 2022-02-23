@@ -1,6 +1,7 @@
 FROM php:7.4-fpm-alpine
 
 RUN apk update \
+    && apk add --no-cache icu \
     && apk add --no-cache --virtual build-dependencies icu-dev g++ make autoconf \
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \
