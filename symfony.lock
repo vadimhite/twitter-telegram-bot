@@ -121,6 +121,19 @@
     "myclabs/deep-copy": {
         "version": "1.10.2"
     },
+    "nelmio/api-doc-bundle": {
+        "version": "4.8",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "3.0",
+            "ref": "c8e0c38e1a280ab9e37587a8fa32b251d5bc1c94"
+        },
+        "files": [
+            "config/packages/nelmio_api_doc.yaml",
+            "config/routes/nelmio_api_doc.yaml"
+        ]
+    },
     "nikic/php-parser": {
         "version": "v4.13.2"
     },
@@ -257,6 +270,9 @@
         "files": [
             "phpcs.xml.dist"
         ]
+    },
+    "symfony/asset": {
+        "version": "v5.4.3"
     },
     "symfony/browser-kit": {
         "version": "v5.4.3"
@@ -436,6 +452,9 @@
     "symfony/process": {
         "version": "v5.4.3"
     },
+    "symfony/property-info": {
+        "version": "v5.4.3"
+    },
     "symfony/proxy-manager-bridge": {
         "version": "v5.4.3"
     },
@@ -514,5 +533,8 @@
     },
     "webmozart/assert": {
         "version": "1.10.0"
+    },
+    "zircote/swagger-php": {
+        "version": "4.2.9"
     }
 }
