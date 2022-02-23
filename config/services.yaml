@@ -10,9 +10,6 @@ services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-        bind:
-            $twitterClientId: "%env(TWITTER_CLIENT_ID)%"
-            $twitterClientSecret: "%env(TWITTER_CLIENT_SECRET)%"
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
     App\:
@@ -25,3 +22,8 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\Service\Twitter\Twitter:
+        arguments:
+            $twitterClientId: "%env(TWITTER_CLIENT_ID)%"
+            $twitterClientSecret: "%env(TWITTER_CLIENT_SECRET)%"
+            $redirectUrl: "%env(REDIRECT_URL_FOR_TWITTER_AUTHENTICATION)%"
